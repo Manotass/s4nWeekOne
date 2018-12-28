@@ -1,5 +1,7 @@
 package s4n.week1.challenge;
 
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.stream.Collectors;
@@ -8,20 +10,33 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class StreamsTest {
-    Person person1=new Person("Juan","Castilla","1","111111111",28,"M",1000000);
-    Person person2=new Person("Andres",null,"2",null,30,"M",250000);
-    Person person3=new Person("Jairo","Hermandez","3","222222222",32,"M",950000);
-    Person person4=new Person("Juliana","Mejia","4","3333333333",19,"F",450000);
-    Person person5=new Person("Andrea","Salamanca","5","333333333333",25,"F",985000);
-    Streams streams =new Streams();
+public class StreamsTest {
 
-        StreamsTest(){
-            streams.addPerson(person1);
-            streams.addPerson(person2);
-            streams.addPerson(person3);
-            streams.addPerson(person4);
-            streams.addPerson(person5);
+     Person person1;
+     Person person2;
+     Person person3;
+     Person person4;
+     Person person5;
+     Streams streams;
+
+    @BeforeEach
+     void setup() {
+        person1=new Person("Juan","Castilla","1","111111111",28,"M",1000000);
+        person2=new Person("Andres",null,"2",null,30,"M",250000);
+        person3=new Person("Jairo","Hermandez","3","222222222",32,"M",950000);
+        person4=new Person("Juliana","Mejia","4","3333333333",19,"F",450000);
+        person5=new Person("Andrea","Salamanca","5","333333333333",25,"F",985000);
+        streams =new Streams();
+        streams.addPerson(person1);
+        streams.addPerson(person2);
+        streams.addPerson(person3);
+        streams.addPerson(person4);
+        streams.addPerson(person5);
+    }
+
+
+        public StreamsTest(){
+
         }
 
     @Test

@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class FunctionalIterfazTest {
+public class FunctionalIterfazTest {
 
     @FunctionalInterface
     public interface sumIterface{
@@ -21,7 +21,7 @@ class FunctionalIterfazTest {
     }
 
     @Test
-    public void functionlaInterfaceTest(){
+    public void InterfaceTest(){
         sumIterface s=(a,b)->a+b;
         assertEquals(8,numberSum(2,6,s));
     }
